@@ -1,7 +1,7 @@
 import { defineChain } from "viem";
 import { chainConfig } from "viem/zksync";
 
-export const cronoszkEVMTestnet = /* #__PURE__ */ defineChain({
+export const cronoszkEVMTestnet = defineChain({
   ...chainConfig,
   id: 240,
   name: "Cronos zkEVM Testnet",
