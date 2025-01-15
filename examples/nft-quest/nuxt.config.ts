@@ -1,5 +1,7 @@
 import { defineNuxtConfig } from "nuxt/config";
-import { zksyncInMemoryNode, zksyncSepoliaTestnet } from "viem/chains";
+import { zksyncInMemoryNode } from "viem/chains";
+
+import { cronoszkEVMTestnet } from "./cronoszkEVMTestnet";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -19,14 +21,14 @@ export default defineNuxtConfig({
   $production: {
     runtimeConfig: {
       public: {
-        chain: zksyncSepoliaTestnet,
+        chain: cronoszkEVMTestnet,
         contracts: {
-          nft: "0x4D533d3B20b50b57268f189F93bFaf8B39c36AB6",
-          paymaster: "0x60eef092977DF2738480a6986e2aCD10236b1FA7",
+          nft: "0x1DB051f0853c01EF57AE4Ef812282379778370C3",
+          paymaster: "0x2f0983dCa6a2458b0f0085Bb374Fe3308673f609",
         },
-        baseUrl: "https://nft.zksync.dev",
-        authServerUrl: "https://auth-test.zksync.dev/confirm",
-        explorerUrl: "https://sepolia.explorer.zksync.io",
+        baseUrl: "https://zksync-sso.vercel.app",
+        authServerUrl: "https://chain-sso-testnet-zkevm-cronos-org.3ona.co/confirm",
+        explorerUrl: "https://explorer.zkevm.cronos.org/testnet",
       },
     },
   },
